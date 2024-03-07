@@ -1,0 +1,212 @@
+* {
+    padding: 0;
+    margin: 0; /*  se crea para tener una margen(creoXD)  */
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(rgb(0, 0, 0) ,40% , rgb(255, 255, 255) ) 
+}
+
+header {
+    background: linear-gradient(70deg, rgb(242, 255, 0), rgb(204, 187, 0)); /* color de la barra de navegacion */
+    width: 100%;/* Tamaño de la barra de navegacion, en este caso es del 100% porque cubre todo */
+    clear: both;/* asegura que la barra quede debajo de cualquier elemento y no se superpongan cosas */
+    content: " ";/* sirve para agregar un texto mas adelante(no le veo funcionamiento pero mejor no moverlo) */
+    display: table;/* Aline los elementos que esten en header */
+    position:fixed;
+}
+
+.menu {
+    max-width: 1000px;/* Establece el largor o anchor de cosas que se pueden colocar en la barra */
+    margin: 0 auto;/* se deja en 0 y automatico para que centre y no tener problemas con la margen */
+}
+
+img {
+    width: 130px;/* Tamaño de la imagen */
+    float: left;/* Lo ubico como obtejo flotante a la izquierda para que el texto no se vea afectado  */
+    clear: both;/* Evita que algo se superponga encima de la imagen */
+}
+
+nav {
+    float: right; /* Lo ubico a la derecha para que el texto no se vea afectado */
+}
+
+nav ul li {
+    list-style: none; /* Elimina las viñetas que aparecen al colocar el texto */
+    margin-right: 100px;/* Margen que lleva cada una a la derecha para evitar que se superpongan */
+    float: left;/* Coloca el texto de manera vertical hacia la izquierda */
+    padding: 0.2px 0;/* Lo utilize de apoyo para dar un poco mas entre las palabras,creando relleno */
+    line-height: 120px;/* Controla la altura a la que aparece el texto */
+    position: relative; /* La posicion es relativa, para que mas adelante se puede "modificar" */
+}
+
+nav ul li a {
+    text-decoration: none; /* Elimina el "subrayado" que aparece junto con las viñetas */
+    color: black;/* Color de la letra de la barra */
+    font-weight: bold;/* Sirve para definir si quiere delgado o gruesa la letra,en este caso quedo gruesa ;) */
+    font-size: 20px;/* Tamaño de la letra */
+    font-family: cursive;/* Tipo de letra */
+}
+
+nav ul li a::before { /* Permite agregar algo estetico,contenido,etc.. sin necesidad de hacer algo en HTML */
+    display: flex;/* No entendi jajaja*/
+    content: "";/* No muestra nada, pues pa que no muestre nada la barrita naranja(Nada de texto)*/
+    width: 0%;/* tamaño 0,para que la barrita se vea horizontal */
+    background: rgb(243, 147, 78); /* El color de la barra naranja */
+    height: 5px;/* el largor de la barra naranja */
+    top: 0;/* Le da la posicion maxima a la barra naranja */
+    position: absolute;/* se pone posicion absoluta, para que tengo una posicion fija y no se salga encima de otras */
+    transition: width 0.1s;/* El tiempo de transicion de la barrita naranja */
+}
+
+nav ul li a:hover::before {/* hover hace referencia a cuando el usuario pone el cursos encima */
+    width: 100%;/* sse concede el 100% para que la linea horizontal se puede desplazar  */
+    /* horizontamente hasta donde hallamos definido la posicion y margen */
+}
+
+.Fondo {
+    background-image: url(imagens/arepa2.jpg);/* inserta imagen de arepita rica,(Reemplazar) */
+    width: 1000px;/* ancho de imagen */
+    height: 1000px;/* largo de imagen */
+    margin-left: 903px;/* margen de la izquierda para acomodar, lo utilize como ayuda para acomodar mejor la imagen*/
+    background-repeat: no-repeat;/* No permite que se repita la imagen, a ratos sucede nosepo, pero lo evita */
+    background-attachment: fixed;/* la imagen queda estatica y no se desplaza dandole efecto */
+    background-position: right;/* La posicion de la imagen queda a la derecha, pero hay que cuadrarla */
+}
+
+.iconos {
+    padding: 200px;/*Tamaño de la barra */
+    background-color: white;/*Color de la barra */
+    background-image: url(imagens/empanada_icono.png), url(imagens/arepa_icono.png), url(imagens/arepa_huevo_icono.png);/*Agrego imagenes */
+    background-repeat: no-repeat;/*Evita que se repitan las imagenes */
+    background-attachment: fixed;/*Deja la imagen estatica, para darle el efecto */
+    background-position: 94% 19%, 50% 20%, 5% 19%;/*Dispocion(Izqui-Derecha),Altura,cada coma separa la configuracion de cada imagen*/
+    background-size: 290px, 265px;/*Tamaño de las imagenes, falta una pero no agrege un tamaño porque asi ta bien */
+}
+
+.Container {
+    width: 100%;/* Crea una barra de larga que ocupe la pagina  */
+    background: white;/* barra de color blanco */
+    padding: 30px;/* el ancho de la barra */
+}
+
+.Productos {
+    max-width: 4000px;  /* defino el ancho, para colocar el texto */
+    margin: 50px;/* margen para separar las imagenees del texto */
+    display: flex;/* Facilita y deja modificar de mejor manera el texto */
+    justify-content: space-between;/* Esta opcion permite colocar un espacio igual, en cada parte del texto */
+    color: black;/* Letra del texto color carbon */
+    font-weight: bold;/* Letra delgada, porque la gruesa te la comes nomentiras, es letra gruesa */
+    font-size: 50px;/* Tamaño de la letra */
+    font-family: papyrus;/* Tipo de letra */
+    line-height: 0.2px;/* Altura de la letra */
+}
+
+.arepa_huevo{
+    margin-left:40px;/* Margen de izquieda para retocar la ubicacion de la letra */
+}
+
+.arepa{
+    margin-left: 80px;/* Margen de izquieda para retocar la ubicacion de la letra */
+}
+
+.empanada{
+    margin-left: 30px;/* Margen de izquieda para retocar la ubicacion de la letra */
+}
+
+.FotProd {
+    padding: 400px;
+    background-image: url(imagens/empanada_prueba.jpg), url(imagens/Arepa-de-Huevo_prueba.webp), url(imagens/arepa_queso_prueba.jpg);/*Agrego imagenes */
+    background-repeat: no-repeat;/*Evita que se repitan imagenes */
+    background-attachment: fixed;/*Mantiene la imagen estatica y le da efecto pleno */
+    background-position: 98% 105%, 50% 105%, 2% 105%;/*Dispocion(Izqui-Derecha),Altura, cada coma separa la configuracion de cada imagen*/
+    background-size: 400px 400px, 400px 400px, 400px 400px; /*Tamaño de las imagenes, todas iguales pa queden iguales */
+    /*cada coma separa la configuracion de cada imagen*/
+}
+ 
+
+/* desde aca comienza la hoja de estio para la parte del footer*/
+
+.mani{
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer{
+
+    background-color: black;
+    padding: 80px 0;
+}
+
+.footer-row {
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-links{
+    
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-links h4 {
+
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid rgb(238, 234, 25);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.footer-links ul li a {
+
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3s ease;
+}
+
+.footer-links ul li a:hover{
+
+    color: aqua;
+    padding-left: 6px;
+}
+
+.social-link a {
+    
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: rgb(135, 192, 184);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #FFFFFF;
+    transition: all .5s ease;
+}
+
+.social-link a:hover{
+
+    background-color: aqua;
+}
+
+/*esto funciona para que el footer sea responsive y se adapte a cualquier pantalla*/
+
+@media(max-width:991px) {
+    .footer-row {
+        text-align: center;
+    }
+
+    .footer-links {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
